@@ -1,0 +1,16 @@
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Shared Digit 23&37"+hasSharedDigit(23, 73));
+        System.out.println("Shared Digit 100&26"+hasSharedDigit(100, 26));
+    }
+        public static boolean hasSharedDigit(int nb1, int nb2){
+            if(nb1 < 9 && nb1 >100 && nb2 < 9 && nb2 >100){
+                return false;
+            }
+            if(nb1/10 == nb2 /10 || nb1/19 == nb2 % 10||nb1%10 == nb2/10||nb1%10==nb2%10){
+                return true;
+            }else{
+                return false;
+            }
+        }
+}
